@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="NMHFePIgfRIZS4eo0XCRs3nrj4PXd-1QxJBRH_1vlPM" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-compatible"content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,16 +11,18 @@
 </head>
 <body>
     <nav class="navbar">
-<a href="#"class="logo">Hii,It's</a>
-        <i class="fa-solid fa-bars menu-icon"></i>
+<a href="#"class="logo">Hi,It's</a>
+
+<i class="fa-solid fa-bars menu-icon"></i>
+
 <ul>
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">Education</a></li>
     <li><a href="skills.html">Skills</a></li>
     <li><a href="#services">Service</a></li>
     <li><a href="contact.html">Contact</a></li>
-</ul>
-        
+  </ul>
+  
 </nav>
 <section class="home">
         <div class="home-img">
@@ -40,22 +41,26 @@
     <div class="btn-sci">
         <a href="website resume.pdf"class="btn">Download cv</a>
         <div class="sci">
-            <a href=https://www.instagram.com/techbysahib_ali?igsh=ZmJneDJyaXltcnI4><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.instagram.com/sahib_ali_xyz?igsh=MWRndzN2bTE2NjY3Ng=="><i class="fa-brands fa-instagram"></i></a>
             <a href="https://www.facebook.com/share/1CnRvZXe6k/?mibextid=qi2Omg"><i class="fa-brands fa-facebook"></i></a>
             <a href="https://youtube.com/@student_life759?si=2QIcEBr6FvBfbauF"><i class="fa-brands fa-youtube"></i></a>
             <a href="https://telegram.org/dl"><i class="fa-brands fa-telegram"></i></a>
         </div>
 </section>
 <script>
-  const menuIcon = document.querySelector('.menu-icon');
-  const navUl = document.querySelector('.navbar ul');
+ const menuIcon = document.querySelector(".menu-icon");
+const navUl = document.querySelector(".navbar ul");
 
-  menuIcon.addEventListener('click', () => {
-    navUl.classList.toggle('show');
-  });
+menuIcon.addEventListener("click",(e)=>{
+    e.stopPropagation();
+    navUl.classList.toggle("show");
+});
+
+document.addEventListener("click",(e)=>{
+    if(!navUl.contains(e.target) && !menuIcon.contains(e.target)){
+        navUl.classList.remove("show");
+    }
+});
 </script>
-
 </body>
 </html>
-  
-
